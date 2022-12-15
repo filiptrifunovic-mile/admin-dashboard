@@ -22,12 +22,16 @@ export const ContextProvider = ({ children }) => {
     setCurrentMode(e.target.value);
 
     localStorage.setItem("themeMode", e.target.value);
+
+    setThemeSettings(false);
   }
 
-  function setColor(e) {
-    setCurrentColor(e.target.value);
+  function setColor(color) {
+    setCurrentColor(color);
 
-    localStorage.setItem("colorMode", e.target.value);
+    localStorage.setItem("colorMode", color);
+
+    setThemeSettings(false);
   }
 
   function handleClick(clicked) {
@@ -50,6 +54,8 @@ export const ContextProvider = ({ children }) => {
         setCurrentMode,
         themeSettings,
         setThemeSettings,
+        setMode,
+        setColor,
       }}
     >
       {children}
