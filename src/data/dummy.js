@@ -3079,6 +3079,7 @@ export const stackedPrimaryXAxis = {
   minorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
+
   interval: 1,
   lineStyle: { width: 0 },
   labelIntersectAction: "Rotate45",
